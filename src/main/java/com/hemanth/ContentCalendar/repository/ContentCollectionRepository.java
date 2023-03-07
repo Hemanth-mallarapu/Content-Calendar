@@ -39,6 +39,9 @@ public class ContentCollectionRepository {
 
     }
 
+    public void delete(Integer id) {
+        contentList.removeIf(content -> content.id().equals(id));
+    }
     @PostConstruct
     private void init(){
         Content c = new Content(1,
@@ -50,7 +53,5 @@ public class ContentCollectionRepository {
                 null, "");
         contentList.add(c);
     }
-
-
-
+    
 }

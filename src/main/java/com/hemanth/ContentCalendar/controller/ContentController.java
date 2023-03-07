@@ -2,6 +2,7 @@ package com.hemanth.ContentCalendar.controller;
 
 import com.hemanth.ContentCalendar.entity.Content;
 import com.hemanth.ContentCalendar.repository.ContentCollectionRepository;
+import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
@@ -32,17 +33,25 @@ public class ContentController {
     }
     @ResponseStatus(HttpStatus.CREATED)
     @PostMapping
-    public void save(@RequestBody Content content){
+    public void save(@Valid @RequestBody Content content){
         repository.save(content);
     }
 
+    @ResponseStatus(HttpStatus.NO_CONTENT)
     @PutMapping("/{id}")
-    public void update(@RequestBody Content content, @PathVariable Integer id){
+    public void update(@Valid @RequestBody Content content, @PathVariable Integer id){
 
         if(!repository.existById(id)){
-            throw new ResponseStatusException(HttpStatus.NO_CONTENT, "No Content Found");
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No Content Found");
         }
-
-
+        repository.save(content);
+    }
+    @ResponseStatus(HttpStatus.NO_CONTENT)
+    @DeleteMapping("/{id}")
+    public void delete(@PathVariable Integer id){
+        if(!repository.existById(id)){
+            throw new ResponseStatusException(HttpStatus.NOT_FOUND, "No records found with this "+ id);
+        }
+        repository.delete(id);
     }
 }
