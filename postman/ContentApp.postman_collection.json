@@ -1,0 +1,185 @@
+{
+	"info": {
+		"_postman_id": "c353b3e8-f9aa-4f43-92d1-e3a76e223532",
+		"name": "ContentApp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26180528"
+	},
+	"item": [
+		{
+			"name": "GetAllContent",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/content",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Content",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 2,\r\n    \"title\": \"My second testing\",\r\n    \"desc\": \"My second testing.\",\r\n    \"status\": \"IDEA\",\r\n    \"contentType\": \"ARTICLE\",\r\n    \"dateCreated\": \"2023-03-05T02:34:12.3530013\",\r\n    \"dateUpdated\": null,\r\n    \"url\": \"\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/content",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"content"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetContentById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/content/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"content",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateContentById",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\": 1,\r\n    \"title\": \"My Third testing\",\r\n    \"desc\": \"My Third testing.\",\r\n    \"status\": \"IN_PROGRESS\",\r\n    \"contentType\": \"VIDEO\",\r\n    \"dateCreated\": \"2023-03-05T02:34:12.3530013\",\r\n    \"dateUpdated\": \"2023-03-05T02:34:12.3530013\",\r\n    \"url\": \"http://localhost:8080/Updating content\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/v1/content/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"content",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/api/v1/content/2",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/content/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"content",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "findAllByTitleContains",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/content/filter/record",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"content",
+						"filter",
+						"record"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ListByStatus",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/v1/content/filter/status/COMPLETED",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"content",
+						"filter",
+						"status",
+						"COMPLETED"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

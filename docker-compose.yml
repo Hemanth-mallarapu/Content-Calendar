@@ -1,9 +1,9 @@
 version: '3.8'
 
-service:
+services:
   db:
     image: postgres:alpine
-    port:
+    ports:
       - "5432:5432"
     environment:
       POSTGRES_USERNAME: postgres
