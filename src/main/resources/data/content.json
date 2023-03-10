@@ -1,0 +1,52 @@
+[
+  {
+    "id"  : null,
+  "title": " Nice section",
+  "desc": "My first insertion with spring data JDBC.",
+  "status": "IN_PROGRESS",
+  "contentType": "ARTICLE",
+  "dateCreated": "2023-03-07T02:34:12.3530013",
+  "dateUpdated": null,
+  "url": ""
+  },
+  {
+    "id"  : null,
+    "title": " Nice section",
+    "desc": "My first insertion with CHAT GPT.",
+    "status": "IN_PROGRESS",
+    "contentType": "VIDEO",
+    "dateCreated": "2023-03-07T02:34:12.3530013",
+    "dateUpdated": null,
+    "url": ""
+  },
+  {
+    "id"  : null,
+    "title": " section",
+    "desc": "My GOOGLE BOT.",
+    "status": "IN_PROGRESS",
+    "contentType": "COURSE",
+    "dateCreated": "2023-03-07T02:34:12.3530013",
+    "dateUpdated": null,
+    "url": ""
+  },
+  {
+    "id"  : null,
+    "title": " Nice section",
+    "desc": "My ALEXA.",
+    "status": "IN_PROGRESS",
+    "contentType": "VIDEO",
+    "dateCreated": "2023-03-07T02:34:12.3530013",
+    "dateUpdated": null,
+    "url": ""
+  },
+  {
+    "id"  : null,
+    "title": " Nice section",
+    "desc": "My SIRI.",
+    "status": "IN_PROGRESS",
+    "contentType": "VIDEO",
+    "dateCreated": "2023-03-07T02:34:12.3530013",
+    "dateUpdated": null,
+    "url": ""
+  }
+]

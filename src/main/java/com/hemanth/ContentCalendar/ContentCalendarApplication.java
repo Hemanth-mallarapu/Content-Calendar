@@ -1,8 +1,11 @@
 package com.hemanth.ContentCalendar;
 
+import com.hemanth.ContentCalendar.configuration.ContentCalendarProperties;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
 
+@EnableConfigurationProperties(ContentCalendarProperties.class)
 @SpringBootApplication
 public class ContentCalendarApplication {
 

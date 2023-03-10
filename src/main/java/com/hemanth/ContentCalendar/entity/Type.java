@@ -5,6 +5,6 @@ public enum Type {
     ARTICLE,
     VIDEO,
     COURSE,
-    CONFRENCE_TALK
+    CONFERENCE_TALK
 
 }
